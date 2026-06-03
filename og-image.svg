@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="MythShare — Celtic and Welsh Mythology Shareware Games">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060f0b"/>
+      <stop offset="50%" stop-color="#1a472a"/>
+      <stop offset="100%" stop-color="#060f0b"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="65%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.7"/>
+    </radialGradient>
+    <pattern id="scan" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000" fill-opacity="0.18"/>
+    </pattern>
+    <pattern id="knots" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M30 5 L35 15 L45 15 L37 22 L40 32 L30 26 L20 32 L23 22 L15 15 L25 15 Z" fill="none" stroke="#c9a227" stroke-opacity="0.15" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#knots)"/>
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+  <rect width="1200" height="630" fill="url(#scan)"/>
+
+  <!-- Outer pixel border -->
+  <rect x="20" y="20" width="1160" height="590" fill="none" stroke="#0d1f16" stroke-width="6"/>
+  <rect x="26" y="26" width="1148" height="578" fill="none" stroke="#c9a227" stroke-width="3"/>
+
+  <!-- Titlebar -->
+  <rect x="29" y="29" width="1142" height="58" fill="#0d1f16"/>
+  <rect x="29" y="85" width="1142" height="2" fill="#c9a227"/>
+  <text x="60" y="68" font-family="'VT323', 'Courier New', monospace" font-size="30" fill="#c9a227" letter-spacing="2">MYTHSHARE.EXE — v1.0 SHAREWARE EDITION</text>
+  <g transform="translate(1066, 47)" font-family="'VT323', 'Courier New', monospace" font-size="22" fill="#0d1f16" text-anchor="middle">
+    <rect x="0" y="0" width="26" height="22" fill="#d4d8d5" stroke="#0d1f16" stroke-width="1"/>
+    <text x="13" y="17">_</text>
+    <rect x="34" y="0" width="26" height="22" fill="#d4d8d5" stroke="#0d1f16" stroke-width="1"/>
+    <text x="47" y="17">□</text>
+    <rect x="68" y="0" width="26" height="22" fill="#d4d8d5" stroke="#0d1f16" stroke-width="1"/>
+    <text x="81" y="17">×</text>
+  </g>
+
+  <!-- Decorative knot ornament top -->
+  <g transform="translate(600, 175)" fill="#c9a227" font-family="'Courier New', monospace" font-size="34" text-anchor="middle" opacity="0.85">
+    <text>⚜ ═══ ✦ ═══ ◆ ═══ ✧ ═══ ◆ ═══ ✦ ═══ ⚜</text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="320" font-family="'Cinzel', 'Times New Roman', serif" font-weight="700" font-size="120" fill="#f5f0e6" text-anchor="middle" letter-spacing="6">MYTHSHARE</text>
+
+  <!-- Highlight tagline -->
+  <text x="600" y="380" font-family="'MedievalSharp', 'Cinzel', cursive" font-size="40" fill="#ffb000" text-anchor="middle" letter-spacing="3" opacity="0.95">Celtic &amp; Welsh Mythology · Shareware Edition</text>
+
+  <!-- Decorative knot ornament bottom -->
+  <g transform="translate(600, 450)" fill="#c9a227" font-family="'Courier New', monospace" font-size="34" text-anchor="middle" opacity="0.85">
+    <text>⚜ ═══ ✧ ═══ ◆ ═══ ✦ ═══ ◆ ═══ ✧ ═══ ⚜</text>
+  </g>
+
+  <!-- Prompt -->
+  <text x="600" y="515" font-family="'VT323', 'Courier New', monospace" font-size="32" fill="#ffb000" text-anchor="middle" letter-spacing="3">C:\MYTHSHARE&gt; run games.exe_</text>
+
+  <!-- Status strip -->
+  <rect x="29" y="555" width="1142" height="48" fill="#0d1f16"/>
+  <rect x="29" y="553" width="1142" height="2" fill="#c9a227"/>
+  <circle cx="60" cy="579" r="6" fill="#4ade80"/>
+  <text x="78" y="586" font-family="'VT323', 'Courier New', monospace" font-size="26" fill="#ffb000" letter-spacing="2">READY · WYRM · ANNWN · MABINOGION · TYLWYTH TEG</text>
+  <text x="1145" y="586" font-family="'VT323', 'Courier New', monospace" font-size="26" fill="#c9a227" text-anchor="end">MYTHSHARE.NET</text>
+</svg>
