@@ -1,6 +1,6 @@
 # MythShare - Celtic & Welsh Mythology Retro Games
 
-Welcome to **MythShare** – a collection of retro-style browser games inspired by Celtic and Welsh mythology, including tales from the Mabinogion and other ancient folklore.
+Welcome to **MythShare** – a collection of 8-bit browser games inspired by Celtic and Welsh mythology, including tales from the Mabinogion and other ancient folklore.
 
 ## 🎮 Games
 
@@ -25,7 +25,14 @@ MythShare brings ancient Celtic and Welsh mythology to life through nostalgic re
 
 ## 🛠️ Technology
 
-This is a static website hosted on GitHub Pages.
+This is a static website hosted on GitHub Pages — no build step.
+
+- `index.html` / `styles.css` — the page and its 8-bit Celtic styling
+- `js/sprites.js` — 16×16 pixel-art sprites drawn from ASCII maps onto `<canvas data-sprite="…">`
+- `js/scene.js` — the animated title-screen night scene (respects `prefers-reduced-motion`)
+- `js/app.js` — sprite painting, footer year, and a certain well-known cheat code
+- `assets/` — pixel knotwork band and drystone wall textures
+- `og-image.png` — social preview card
 
 ## 📄 License
 

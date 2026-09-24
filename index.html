@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>MythShare | Celtic &amp; Welsh Mythology Shareware Games</title>
-    <meta name="title" content="MythShare | Celtic &amp; Welsh Mythology Shareware Games">
-    <meta name="description" content="A shareware-style launcher for Celtic and Welsh mythology browser games. Play Wyrm, descend into Cwm Annwn, and explore the Mabinogion in retro form.">
-    <meta name="keywords" content="Celtic games, Welsh mythology, Mabinogion games, retro games, shareware, Cwm Annwn, Welsh folklore, Wyrm game, browser games, retro FPS">
+    <title>MythShare | 8-Bit Games from Celtic &amp; Welsh Folklore</title>
+    <meta name="title" content="MythShare | 8-Bit Games from Celtic &amp; Welsh Folklore">
+    <meta name="description" content="8-bit browser games carved from Celtic and Welsh folklore. Play Wyrm, descend into Cwm Annwn, and hear the Mabinogion retold in pixels by the fireside.">
+    <meta name="keywords" content="Celtic games, Welsh mythology, Mabinogion games, retro games, 8-bit games, pixel art, Celtic folklore, Cwm Annwn, Welsh folklore, Wyrm game, browser games, retro FPS">
     <meta name="author" content="MythShare">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0d1f16">
+    <meta name="theme-color" content="#120d0a">
     <link rel="canonical" href="https://mythshare.net/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mythshare.net/">
-    <meta property="og:title" content="MythShare | Celtic &amp; Welsh Mythology Shareware Games">
-    <meta property="og:description" content="A shareware-style launcher for Celtic and Welsh mythology browser games. Play Wyrm, descend into Cwm Annwn, and explore the Mabinogion in retro form.">
-    <meta property="og:image" content="https://mythshare.net/og-image.svg">
-    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:title" content="MythShare | 8-Bit Games from Celtic &amp; Welsh Folklore">
+    <meta property="og:description" content="8-bit browser games carved from Celtic and Welsh folklore. Play Wyrm, descend into Cwm Annwn, and hear the Mabinogion retold in pixels by the fireside.">
+    <meta property="og:image" content="https://mythshare.net/og-image.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="MythShare">
@@ -27,17 +27,20 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://mythshare.net/">
-    <meta name="twitter:title" content="MythShare | Celtic &amp; Welsh Mythology Shareware Games">
-    <meta name="twitter:description" content="A shareware-style launcher for Celtic and Welsh mythology browser games. Play Wyrm, descend into Cwm Annwn, and explore the Mabinogion in retro form.">
-    <meta name="twitter:image" content="https://mythshare.net/og-image.svg">
+    <meta name="twitter:title" content="MythShare | 8-Bit Games from Celtic &amp; Welsh Folklore">
+    <meta name="twitter:description" content="8-bit browser games carved from Celtic and Welsh folklore. Play Wyrm, descend into Cwm Annwn, and hear the Mabinogion retold in pixels by the fireside.">
+    <meta name="twitter:image" content="https://mythshare.net/og-image.png">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;family=MedievalSharp&amp;family=VT323&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ogham&amp;family=Press+Start+2P&amp;family=Uncial+Antiqua&amp;family=VT323&amp;display=swap">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="js/sprites.js" defer></script>
+    <script src="js/scene.js" defer></script>
+    <script src="js/app.js" defer></script>
 
     <script type="application/ld+json">
     {
@@ -46,7 +49,7 @@
         "name": "MythShare",
         "alternateName": "MythShare.net",
         "url": "https://mythshare.net/",
-        "description": "A shareware-style launcher for Celtic and Welsh mythology browser games inspired by the Mabinogion."
+        "description": "8-bit browser games carved from Celtic and Welsh folklore and the Mabinogion."
     }
     </script>
     <script type="application/ld+json">
@@ -63,7 +66,7 @@
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Celtic & Welsh Mythology Games",
-        "description": "A collection of retro shareware-style games inspired by Celtic and Welsh folklore",
+        "description": "A collection of 8-bit games inspired by Celtic and Welsh folklore",
         "itemListElement": [
             {
                 "@type": "VideoGame",
@@ -124,258 +127,231 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="shell" role="presentation">
-        <div class="shell__titlebar" role="banner">
-            <div class="shell__title">
-                <a href="/" aria-label="MythShare Home">
-                    <span class="shell__title-icon" aria-hidden="true">⚔</span>
-                    <span>MYTHSHARE.EXE &mdash; v1.0 SHAREWARE EDITION</span>
-                </a>
-            </div>
-            <div class="shell__widgets" aria-hidden="true">
-                <span class="shell__widget">_</span>
-                <span class="shell__widget">□</span>
-                <span class="shell__widget">×</span>
-            </div>
+    <header class="topbar">
+        <div class="topbar__inner">
+            <a class="topbar__logo" href="/" aria-label="MythShare home">
+                <canvas class="sprite sprite--sm" data-sprite="wyrm" width="16" height="16" aria-hidden="true"></canvas>
+                <span>MythShare</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="topbar__menu">
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#tales">Tales</a></li>
+                    <li><a href="#hearth">Hearth</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="knot-band" aria-hidden="true"></div>
+    </header>
 
-        <nav class="shell__menubar" aria-label="Main navigation">
-            <ul class="shell__menubar-list">
-                <li><a href="/">HOME</a></li>
-                <li><a href="#games">GAMES</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#lore">LORE</a></li>
-            </ul>
-        </nav>
+    <main id="main-content">
+        <section class="title-screen" aria-labelledby="hero-title">
+            <canvas id="scene" class="title-screen__scene" aria-hidden="true"></canvas>
+            <div class="title-screen__content">
+                <p class="ogham" aria-hidden="true" title="MythShare, in ogham">᚛ᚋᚔᚈᚆᚄᚆᚐᚏᚓ᚜</p>
+                <h1 id="hero-title" class="logo">
+                    <span class="logo__word">MythShare</span>
+                    <span class="logo__tag">Celtic &amp; Welsh legends in 8-bit</span>
+                </h1>
+                <p class="title-screen__lede">Old tales told by firelight, carved into pixels. From the Four Branches of the Mabinogi to the misted hollows of Annwn.</p>
+                <a href="#games" class="press-start">▶ Press Start</a>
+                <p class="title-screen__credits" aria-hidden="true">1 Player &nbsp;·&nbsp; Free Play &nbsp;·&nbsp; © <span class="js-year">2026</span> MythShare</p>
+            </div>
+        </section>
 
-        <main id="main-content" class="shell__body">
-            <section class="hero" aria-labelledby="hero-title">
-                <div class="hero-content">
-                    <pre class="hero__knot" aria-hidden="true">⚜ ═══ ✦ ═══ ◆ ═══ ✧ ═══ ◆ ═══ ✦ ═══ ⚜</pre>
-                    <h1 id="hero-title">Enter the Realm of <span class="highlight">Celtic Legends</span></h1>
-                    <p class="hero-subtitle">A shareware-era launcher for Welsh and Celtic mythology in browser form. From the tales of the Mabinogion to the misted depths of Annwn.</p>
-                    <p class="hero__prompt" aria-hidden="true">C:\MYTHSHARE&gt; run games.exe<span class="hero__cursor"></span></p>
-                    <a href="#games" class="pixel-button">[ &nbsp;ENTER&nbsp; ] EXPLORE GAMES</a>
-                    <pre class="hero__knot" aria-hidden="true" style="margin-top: 2rem;">⚜ ═══ ✧ ═══ ◆ ═══ ✦ ═══ ◆ ═══ ✧ ═══ ⚜</pre>
-                </div>
-            </section>
+        <div class="knot-band" aria-hidden="true"></div>
 
-            <section id="games" class="games-section" aria-labelledby="games-title">
-                <div class="section-container">
-                    <h2 id="games-title" class="section-title">Our Games</h2>
-                    <p class="section-prompt" aria-hidden="true">C:\MYTHSHARE\GAMES&gt; dir /w</p>
-                    <p class="section-intro">Six titles drawn from Welsh and Celtic mythology — playable demos, registered builds, and tales still in development.</p>
+        <section id="games" class="games" aria-labelledby="games-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-head__eyebrow" aria-hidden="true">— Select a game —</p>
+                    <h2 id="games-title">Choose Your Tale</h2>
+                    <p class="section-head__intro">Six games drawn from Welsh and Celtic mythology. Two are ready to play; four still sleep beneath the barrow mound.</p>
+                </header>
 
-                    <div class="games-grid">
-                        <article class="game-card" itemscope itemtype="https://schema.org/VideoGame">
-                            <header class="game-card__header">
-                                <span class="game-card__filename">WYRM______.EXE</span>
-                                <span class="game-card__size">128K</span>
-                            </header>
-                            <div class="game-card__body">
-                                <div class="game-icon" aria-hidden="true">🐉</div>
+                <div class="cart-grid">
+                        <article class="cart" itemscope itemtype="https://schema.org/VideoGame">
+                            <div class="cart__art">
+                                <span class="cart__slot" aria-hidden="true">01</span>
+                                <canvas class="sprite" data-sprite="wyrm" width="16" height="16" aria-hidden="true"></canvas>
+                            </div>
+                            <div class="cart__body">
                                 <h3 itemprop="name">Wyrm</h3>
-                                <p class="game-genre" itemprop="genre">Arcade · Puzzle</p>
+                                <p class="cart__genre" itemprop="genre">Arcade · Puzzle</p>
                                 <p itemprop="description">A Celtic twist on the classic snake game. Guide your mystical wyrm through ancient landscapes, collecting magical runes and avoiding the treacherous stones of fallen kingdoms.</p>
-                                <div class="game-tags">
-                                    <span class="tag">Classic Arcade</span>
-                                    <span class="tag">Celtic</span>
-                                </div>
-                                <div class="game-card__footer">
-                                    <span class="status-badge status-badge--registered">Registered</span>
-                                    <a href="/wyrm" class="pixel-button" aria-label="Play Wyrm">[ RUN ]</a>
+                                <ul class="cart__tags" aria-label="Tags"><li>Classic Arcade</li><li>Celtic</li></ul>
+                                <div class="cart__footer">
+                                    <span class="badge badge--play">Ready to play</span>
+                                    <a href="/wyrm" class="px-button" aria-label="Play Wyrm">▶ Play</a>
                                 </div>
                             </div>
                         </article>
 
-                        <article class="game-card game-card--featured" itemscope itemtype="https://schema.org/VideoGame">
-                            <span class="featured-ribbon" aria-hidden="true">FEATURED</span>
-                            <header class="game-card__header">
-                                <span class="game-card__filename">ANNWN_____.BIN</span>
-                                <span class="game-card__size">2.4M</span>
-                            </header>
-                            <div class="game-card__body">
-                                <div class="game-icon" aria-hidden="true">🏹</div>
+                        <article class="cart cart--featured" itemscope itemtype="https://schema.org/VideoGame">
+                            <span class="cart__ribbon">★ Featured</span>
+                            <div class="cart__art">
+                                <span class="cart__slot" aria-hidden="true">02</span>
+                                <canvas class="sprite" data-sprite="hound" width="16" height="16" aria-hidden="true"></canvas>
+                            </div>
+                            <div class="cart__body">
                                 <h3 itemprop="name">Cwm Annwn</h3>
-                                <p class="game-genre" itemprop="genre">First-Person Shooter · Adventure</p>
-                                <p itemprop="description">Journey into the Welsh Otherworld in this retro FPS. Face the spectral Cŵn Annwn, navigate the mist-shrouded valleys, and unlock the ancient secrets of Arawn's realm.</p>
-                                <div class="game-tags">
-                                    <span class="tag">Retro FPS</span>
-                                    <span class="tag">Welsh Folklore</span>
-                                    <span class="tag">Mabinogion</span>
-                                </div>
-                                <div class="game-card__footer">
-                                    <span class="status-badge status-badge--demo">Shareware Demo</span>
-                                    <a href="/annwn/" class="pixel-button" aria-label="Play the Cwm Annwn shareware demo">[ RUN ]</a>
+                                <p class="cart__genre" itemprop="genre">First-Person Shooter · Adventure</p>
+                                <p itemprop="description">Journey into the Welsh Otherworld in this retro FPS. Face the spectral Cŵn Annwn — white hounds with blood-red ears — navigate the mist-shrouded valleys, and unlock the ancient secrets of Arawn's realm.</p>
+                                <ul class="cart__tags" aria-label="Tags"><li>Retro FPS</li><li>Welsh Folklore</li><li>Mabinogion</li></ul>
+                                <div class="cart__footer">
+                                    <span class="badge badge--demo">Demo</span>
+                                    <a href="/annwn/" class="px-button" aria-label="Play the Cwm Annwn demo">▶ Play</a>
                                 </div>
                             </div>
                         </article>
 
-                        <article class="game-card" itemscope itemtype="https://schema.org/VideoGame">
-                            <header class="game-card__header">
-                                <span class="game-card__filename">BLODEU____.DAT</span>
-                                <span class="game-card__size">— K</span>
-                            </header>
-                            <div class="game-card__body">
-                                <div class="game-icon" aria-hidden="true">🦉</div>
+                        <article class="cart cart--sealed" itemscope itemtype="https://schema.org/VideoGame">
+                            <div class="cart__art">
+                                <span class="cart__slot" aria-hidden="true">03</span>
+                                <canvas class="sprite" data-sprite="owl" width="16" height="16" aria-hidden="true"></canvas>
+                            </div>
+                            <div class="cart__body">
                                 <h3 itemprop="name">Blodeuwedd's Flight</h3>
-                                <p class="game-genre" itemprop="genre">Platformer · Adventure</p>
+                                <p class="cart__genre" itemprop="genre">Platformer · Adventure</p>
                                 <p itemprop="description">Transform and soar as the owl maiden in this atmospheric platformer. Based on the Fourth Branch of the Mabinogi, experience the tale of the woman made from flowers.</p>
-                                <div class="game-tags">
-                                    <span class="tag">Platformer</span>
-                                    <span class="tag">Mabinogion</span>
-                                </div>
-                                <div class="game-card__footer">
-                                    <span class="status-badge status-badge--soon">Coming Soon</span>
-                                    <span class="pixel-button pixel-button--disabled" aria-disabled="true">[ N/A ]</span>
+                                <ul class="cart__tags" aria-label="Tags"><li>Platformer</li><li>Mabinogion</li></ul>
+                                <div class="cart__footer">
+                                    <span class="badge badge--sealed">Sealed in the barrow</span>
+                                    <span class="px-button px-button--locked" aria-disabled="true">▣ Locked</span>
                                 </div>
                             </div>
                         </article>
 
-                        <article class="game-card" itemscope itemtype="https://schema.org/VideoGame">
-                            <header class="game-card__header">
-                                <span class="game-card__filename">CAULDRON__.DAT</span>
-                                <span class="game-card__size">— K</span>
-                            </header>
-                            <div class="game-card__body">
-                                <div class="game-icon" aria-hidden="true">⚗️</div>
+                        <article class="cart cart--sealed" itemscope itemtype="https://schema.org/VideoGame">
+                            <div class="cart__art">
+                                <span class="cart__slot" aria-hidden="true">04</span>
+                                <canvas class="sprite" data-sprite="cauldron" width="16" height="16" aria-hidden="true"></canvas>
+                            </div>
+                            <div class="cart__body">
                                 <h3 itemprop="name">Cauldron of Rebirth</h3>
-                                <p class="game-genre" itemprop="genre">Roguelike · RPG</p>
+                                <p class="cart__genre" itemprop="genre">Roguelike · RPG</p>
                                 <p itemprop="description">A roguelike dungeon crawler where fallen warriors rise again. Inspired by the Pair Dadeni (Cauldron of Rebirth) from the Second Branch of the Mabinogi.</p>
-                                <div class="game-tags">
-                                    <span class="tag">Roguelike</span>
-                                    <span class="tag">Welsh Mythology</span>
-                                </div>
-                                <div class="game-card__footer">
-                                    <span class="status-badge status-badge--soon">Coming Soon</span>
-                                    <span class="pixel-button pixel-button--disabled" aria-disabled="true">[ N/A ]</span>
+                                <ul class="cart__tags" aria-label="Tags"><li>Roguelike</li><li>Welsh Mythology</li></ul>
+                                <div class="cart__footer">
+                                    <span class="badge badge--sealed">Sealed in the barrow</span>
+                                    <span class="px-button px-button--locked" aria-disabled="true">▣ Locked</span>
                                 </div>
                             </div>
                         </article>
 
-                        <article class="game-card" itemscope itemtype="https://schema.org/VideoGame">
-                            <header class="game-card__header">
-                                <span class="game-card__filename">TALIESIN__.DAT</span>
-                                <span class="game-card__size">— K</span>
-                            </header>
-                            <div class="game-card__body">
-                                <div class="game-icon" aria-hidden="true">🎵</div>
+                        <article class="cart cart--sealed" itemscope itemtype="https://schema.org/VideoGame">
+                            <div class="cart__art">
+                                <span class="cart__slot" aria-hidden="true">05</span>
+                                <canvas class="sprite" data-sprite="harp" width="16" height="16" aria-hidden="true"></canvas>
+                            </div>
+                            <div class="cart__body">
                                 <h3 itemprop="name">Taliesin's Quest</h3>
-                                <p class="game-genre" itemprop="genre">Rhythm · Adventure</p>
+                                <p class="cart__genre" itemprop="genre">Rhythm · Adventure</p>
                                 <p itemprop="description">Follow the legendary bard Taliesin in this rhythm-based adventure. Weave magic through music and poetry as you journey through the courts of ancient Britain.</p>
-                                <div class="game-tags">
-                                    <span class="tag">Rhythm Game</span>
-                                    <span class="tag">Celtic Bard</span>
-                                </div>
-                                <div class="game-card__footer">
-                                    <span class="status-badge status-badge--soon">Coming Soon</span>
-                                    <span class="pixel-button pixel-button--disabled" aria-disabled="true">[ N/A ]</span>
+                                <ul class="cart__tags" aria-label="Tags"><li>Rhythm Game</li><li>Celtic Bard</li></ul>
+                                <div class="cart__footer">
+                                    <span class="badge badge--sealed">Sealed in the barrow</span>
+                                    <span class="px-button px-button--locked" aria-disabled="true">▣ Locked</span>
                                 </div>
                             </div>
                         </article>
 
-                        <article class="game-card" itemscope itemtype="https://schema.org/VideoGame">
-                            <header class="game-card__header">
-                                <span class="game-card__filename">WILDHUNT__.DAT</span>
-                                <span class="game-card__size">— K</span>
-                            </header>
-                            <div class="game-card__body">
-                                <div class="game-icon" aria-hidden="true">🐎</div>
+                        <article class="cart cart--sealed" itemscope itemtype="https://schema.org/VideoGame">
+                            <div class="cart__art">
+                                <span class="cart__slot" aria-hidden="true">06</span>
+                                <canvas class="sprite" data-sprite="stag" width="16" height="16" aria-hidden="true"></canvas>
+                            </div>
+                            <div class="cart__body">
                                 <h3 itemprop="name">The Wild Hunt</h3>
-                                <p class="game-genre" itemprop="genre">Racing · Action</p>
+                                <p class="cart__genre" itemprop="genre">Racing · Action</p>
                                 <p itemprop="description">Ride with the spectral hunters across moonlit skies. An endless runner meets racing game inspired by the Celtic Wild Hunt mythology.</p>
-                                <div class="game-tags">
-                                    <span class="tag">Endless Runner</span>
-                                    <span class="tag">Celtic Folklore</span>
-                                </div>
-                                <div class="game-card__footer">
-                                    <span class="status-badge status-badge--soon">Coming Soon</span>
-                                    <span class="pixel-button pixel-button--disabled" aria-disabled="true">[ N/A ]</span>
+                                <ul class="cart__tags" aria-label="Tags"><li>Endless Runner</li><li>Celtic Folklore</li></ul>
+                                <div class="cart__footer">
+                                    <span class="badge badge--sealed">Sealed in the barrow</span>
+                                    <span class="px-button px-button--locked" aria-disabled="true">▣ Locked</span>
                                 </div>
                             </div>
                         </article>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="about" class="about-section" aria-labelledby="about-title">
-                <div class="section-container">
-                    <h2 id="about-title" class="section-title">About MythShare</h2>
-                    <p class="section-prompt" aria-hidden="true">C:\MYTHSHARE&gt; type README.TXT</p>
+        <div class="knot-band" aria-hidden="true"></div>
 
-                    <div class="readme">
-                        <div class="readme__header" aria-hidden="true">===== README.TXT ==============================================</div>
-                        <p>MythShare is dedicated to bringing the rich tapestry of Celtic and Welsh mythology to life through retro-inspired browser games. Each title is small, self-contained, and free to play — distributed in the spirit of the great shareware era.</p>
-                        <p>Our games draw from ancient sources including:</p>
-                        <ul class="lore-list">
-                            <li><strong>The Mabinogion</strong> — Eleven prose stories from medieval Welsh manuscripts.</li>
-                            <li><strong>Celtic Folklore</strong> — Tales of the Tuatha Dé Danann, the Otherworld, and ancient heroes.</li>
-                            <li><strong>Welsh Legends</strong> — Stories of Annwn, the Tylwyth Teg, and the great bards of Britain.</li>
+        <section id="tales" class="tales" aria-labelledby="tales-title">
+            <div class="container">
+                <header class="section-head section-head--dark">
+                    <p class="section-head__eyebrow" aria-hidden="true">— From the scrolls —</p>
+                    <h2 id="tales-title">The Old Tales</h2>
+                </header>
+
+                <div class="scroll-grid">
+                    <article class="scroll">
+                        <canvas class="sprite scroll__sprite" data-sprite="book" width="16" height="16" aria-hidden="true"></canvas>
+                        <h3>The Mabinogion</h3>
+                        <p>The Mabinogion is the earliest prose literature of Britain. These tales include the Four Branches of the Mabinogi, native Welsh stories, and Arthurian romances passed down through medieval Welsh manuscripts.</p>
+                    </article>
+                    <article class="scroll">
+                        <canvas class="sprite scroll__sprite" data-sprite="dolmen" width="16" height="16" aria-hidden="true"></canvas>
+                        <h3>Annwn, the Otherworld</h3>
+                        <p>In Welsh mythology, Annwn is the Otherworld, ruled by Arawn or Gwyn ap Nudd. It is a realm of eternal youth and abundance, home to the spectral Cŵn Annwn — the Hounds of Annwn that ride with the Wild Hunt.</p>
+                    </article>
+                    <article class="scroll">
+                        <canvas class="sprite scroll__sprite" data-sprite="toadstool" width="16" height="16" aria-hidden="true"></canvas>
+                        <h3>The Tylwyth Teg</h3>
+                        <p>The Tylwyth Teg, or "Fair Family", are the Welsh fairies. These beings inhabit lakes, rivers, and hills, and are known for their enchanting music, secret revels, and dangerous magical gifts.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="knot-band" aria-hidden="true"></div>
+
+        <section id="hearth" class="hearth" aria-labelledby="hearth-title">
+            <div class="container">
+                <header class="section-head section-head--dark">
+                    <p class="section-head__eyebrow" aria-hidden="true">— Pull up a stool —</p>
+                    <h2 id="hearth-title">By the Hearth</h2>
+                </header>
+
+                <div class="dialog">
+                    <div class="dialog__portrait" aria-hidden="true">
+                        <canvas class="sprite" data-sprite="bard" width="16" height="16"></canvas>
+                        <span>Cyfarwydd</span>
+                    </div>
+                    <div class="dialog__text">
+                        <p class="dialog__speaker" aria-hidden="true">The Storyteller says:</p>
+                        <p>Come in from the rain, traveller. MythShare brings the old tales of Wales and the Celtic lands to life as small, free browser games — no install, no fuss, just press start.</p>
+                        <p>Our games draw from the old sources:</p>
+                        <ul class="rune-list">
+                            <li><strong>The Mabinogion</strong> — eleven prose stories from medieval Welsh manuscripts.</li>
+                            <li><strong>Celtic folklore</strong> — tales of the Tuatha Dé Danann, the Otherworld, and ancient heroes.</li>
+                            <li><strong>Welsh legend</strong> — stories of Annwn, the Tylwyth Teg, and the great bards of Britain.</li>
                         </ul>
-                        <p>Each game is crafted with respect for these traditions while embracing the nostalgic charm of classic gaming.</p>
-
-                        <ul class="feature-list" aria-label="Features">
-                            <li>
-                                <span class="feature-name">Authentic Lore</span>
-                                <span class="feature-dots" aria-hidden="true"></span>
-                                <span class="feature-desc">Rooted in genuine Welsh mythology</span>
-                            </li>
-                            <li>
-                                <span class="feature-name">Retro Style</span>
-                                <span class="feature-dots" aria-hidden="true"></span>
-                                <span class="feature-desc">Classic gameplay, modern accessibility</span>
-                            </li>
-                            <li>
-                                <span class="feature-name">Browser-Based</span>
-                                <span class="feature-dots" aria-hidden="true"></span>
-                                <span class="feature-desc">Play instantly, no install required</span>
-                            </li>
-                        </ul>
+                        <p>Each is made with respect for the tradition, and with a fondness for the cartridges we grew up on.</p>
+                        <span class="dialog__more" aria-hidden="true">▼</span>
                     </div>
                 </div>
-            </section>
 
-            <section id="lore" class="lore-section" aria-labelledby="lore-title">
-                <div class="section-container">
-                    <h2 id="lore-title" class="section-title">The Lore</h2>
-                    <p class="section-prompt" aria-hidden="true">C:\MYTHSHARE\SCROLLS&gt; dir</p>
+                <ul class="inventory" aria-label="What you'll find">
+                    <li><span class="inventory__icon" aria-hidden="true">ᚁ</span><strong>True lore</strong><span>Rooted in genuine Welsh mythology</span></li>
+                    <li><span class="inventory__icon" aria-hidden="true">ᚂ</span><strong>8-bit soul</strong><span>Classic play, modern accessibility</span></li>
+                    <li><span class="inventory__icon" aria-hidden="true">ᚃ</span><strong>No install</strong><span>Runs right here in your browser</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-                    <div class="lore-grid">
-                        <article class="lore-card">
-                            <header class="lore-card__filename" aria-hidden="true">MABINOGION.TXT</header>
-                            <div class="lore-card__body">
-                                <h3>The Mabinogion</h3>
-                                <p>The Mabinogion is the earliest prose literature of Britain. These tales include the Four Branches of the Mabinogi, native Welsh stories, and Arthurian romances passed down through medieval Welsh manuscripts.</p>
-                            </div>
-                        </article>
-                        <article class="lore-card">
-                            <header class="lore-card__filename" aria-hidden="true">ANNWN_____.TXT</header>
-                            <div class="lore-card__body">
-                                <h3>Annwn — The Otherworld</h3>
-                                <p>In Welsh mythology, Annwn is the Otherworld, ruled by Arawn or Gwyn ap Nudd. It is a realm of eternal youth and abundance, home to the spectral Cŵn Annwn — the Hounds of Annwn that ride with the Wild Hunt.</p>
-                            </div>
-                        </article>
-                        <article class="lore-card">
-                            <header class="lore-card__filename" aria-hidden="true">TYLWYTHTEG.TXT</header>
-                            <div class="lore-card__body">
-                                <h3>The Tylwyth Teg</h3>
-                                <p>The Tylwyth Teg, or "Fair Family", are the Welsh fairies. These beings inhabit lakes, rivers, and hills, and are known for their enchanting music, secret revels, and dangerous magical gifts.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <footer class="footer">
+        <div class="footer__wall" aria-hidden="true"></div>
+        <div class="footer__inner">
+            <p class="footer__continue"><span aria-hidden="true">Continue?</span> <a href="#main-content">▶ Back to the start</a></p>
+            <p>© <span class="js-year">2026</span> MythShare.net · Made with reverence for Celtic lore</p>
+        </div>
+    </footer>
 
-        <footer class="shell__statusbar" role="contentinfo">
-            <span class="shell__statusbar-led">READY</span>
-            <span>v1.0 SHAREWARE EDITION</span>
-            <span>© <span id="year">2026</span> MYTHSHARE.NET — MADE WITH REVERENCE FOR CELTIC LORE</span>
-        </footer>
+    <div id="toast" class="toast" role="status" hidden>
+        <p><strong>The Wild Hunt rides!</strong><br>Arawn grants you 30 lives.</p>
     </div>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
